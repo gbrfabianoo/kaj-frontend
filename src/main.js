@@ -1,6 +1,7 @@
 /* eslint-disable */
 import Vue from 'vue';
 import ShardsVue from 'shards-vue';
+import VCalendar from 'v-calendar';
 
 // Styles
 import 'bootstrap/dist/css/bootstrap.css';
@@ -17,7 +18,9 @@ import Default from '@/layouts/Default.vue';
 ShardsVue.install(Vue);
 
 Vue.component('default-layout', Default);
-
+Vue.use(VCalendar, {
+  componentPrefix: 'vc',
+});
 Vue.config.productionTip = false;
 Vue.prototype.$eventHub = new Vue();
 
