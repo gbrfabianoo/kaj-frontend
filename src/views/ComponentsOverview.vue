@@ -70,6 +70,7 @@
                     <strong class="text-muted d-block mb-2">Radio Buttons</strong>
                     <fieldset>
                       <d-form-radio>Default</d-form-radio>
+                      <d-form-radio>Default</d-form-radio>
                       <d-form-radio checked>Checked</d-form-radio>
                       <d-form-radio disabled>Disabled</d-form-radio>
                       <d-form-radio disabled checked>Disabled Checked</d-form-radio>

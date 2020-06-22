@@ -2,10 +2,15 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import PersonalBlog from './views/PersonalBlog.vue';
-import UserProfileLite from './views/UserProfileLite.vue';
 import Errors from './views/Errors.vue';
 import ComponentsOverview from './views/ComponentsOverview.vue';
 import Tables from './views/Tables.vue';
+import DetailLingkungan from './views/DetailLingkungan.vue';
+import DaftarLingkungan from './views/DaftarLingkungan.vue';
+import DaftarMisa from './views/DaftarMisa.vue';
+import DaftarTiket from './views/DaftarTiket.vue';
+import FormMisa from './views/FormMisa.vue';
+import FormLingkungan from './views/FormLingkungan.vue';
 
 Vue.use(Router);
 
@@ -28,9 +33,34 @@ export default new Router({
       component: PersonalBlog,
     },
     {
-      path: '/user-profile-lite',
-      name: 'user-profile-lite',
-      component: UserProfileLite,
+      path: '/detail-lingkungan',
+      name: 'detail-lingkungan',
+      component: DetailLingkungan,
+    },
+    {
+      path: '/daftarlingkungan',
+      name: 'daftarlingkungan',
+      component: DaftarLingkungan,
+    },
+    {
+      path: '/daftarmisa',
+      name: 'daftarmisa',
+      component: DaftarMisa,
+    },
+    {
+      path: '/datartiket',
+      name: 'daftartiket',
+      component: DaftarTiket,
+    },
+    {
+      path: '/formlingkungan',
+      name: 'formlingkungan',
+      component: FormLingkungan,
+    },
+    {
+      path: '/formmisa',
+      name: 'formmisa',
+      component: FormMisa,
     },
     {
       path: '/errors',

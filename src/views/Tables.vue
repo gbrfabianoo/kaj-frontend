@@ -4,7 +4,7 @@
     <div class="page-header row no-gutters py-4">
       <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
         <span class="text-uppercase page-subtitle">Overview</span>
-        <h3 class="page-title">Data Tables</h3>
+        <h3 class="page-title">{{tulisan}}</h3>
       </div>
     </div>
 
@@ -22,43 +22,15 @@
                   <th scope="col" class="border-0">#</th>
                   <th scope="col" class="border-0">First Name</th>
                   <th scope="col" class="border-0">Last Name</th>
-                  <th scope="col" class="border-0">Country</th>
-                  <th scope="col" class="border-0">City</th>
-                  <th scope="col" class="border-0">Phone</th>
+                  <th scope="col" class="border-0">Gender</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Ali</td>
-                  <td>Kerry</td>
-                  <td>Russian Federation</td>
-                  <td>Gdańsk</td>
-                  <td>107-0339</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Clark</td>
-                  <td>Angela</td>
-                  <td>Estonia</td>
-                  <td>Borghetto di Vara</td>
-                  <td>1-660-850-1647</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Jerry</td>
-                  <td>Nathan</td>
-                  <td>Cyprus</td>
-                  <td>Braunau am Inn</td>
-                  <td>214-4225</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Colt</td>
-                  <td>Angela</td>
-                  <td>Liberia</td>
-                  <td>Bad Hersfeld</td>
-                  <td>1-848-473-7416</td>
+                <tr v-for="(data, index) in dummydata">
+                  <td>{{index+1}}</td>
+                  <td>{{data.fname}}</td>
+                  <td>{{data.lname}}</td>
+                  <td>{{data.female ? 'Female' : 'Male'}}</td>
                 </tr>
               </tbody>
             </table>
@@ -127,3 +99,29 @@
     </div>
   </div>
 </template>
+
+<script>
+
+const dummydata = [
+  {
+    fname: 'Gabriel',
+    lname: 'Fabiano',
+    female: false,
+  },
+  {
+    fname: 'Enryl',
+    lname: 'Einhard',
+    female: true,
+  },
+]
+
+export default {
+  name: 'Tables',
+  data() {
+    return {
+      tulisan: 'apalah',
+      dummydata,
+    };
+  },
+}
+</script>

@@ -3,7 +3,7 @@
 
     <!-- Card Header -->
     <d-card-header class="border-bottom">
-      <h6 class="m-0">{{ title }}</h6>
+      <h6 class="m-0">Account Detail</h6>
     </d-card-header>
 
     <d-list-group flush>
