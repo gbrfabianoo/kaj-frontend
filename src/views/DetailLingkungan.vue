@@ -15,7 +15,8 @@
           <d-card-header class="border-bottom text-center">
 
             <div class="mb-3 mx-auto">
-              <img class="rounded-circle" src="@/assets/images/avatars/0.jpg" :alt="dummydata.name" width="110">
+              <img class="rounded-circle" src="@/assets/images/avatars/0.jpg" :alt="dummydata.name" width="110" v-show="dummydata.female">
+              <img class="rounded-circle" src="@/assets/images/avatars/1.jpg" :alt="dummydata.name" width="110" v-show="!dummydata.female">
             </div>
 
             <h4 class="mb-0">{{ dummydata.name }}</h4>
@@ -61,7 +62,7 @@
                       <!-- First Name -->
                       <d-col md="6" class="form-group">
                         <label for="name" style="cursor: context-menu;">Lingkungan</label>
-                        <d-form-input type="text" id="name" v-model="form.name" v-show="editMode"/>
+                        <d-form-input type="text" id="name" v-model="form.name" v-show="editMode" class="hoverable"/>
                         <d-form-input type="text" id="name" :value="form.name" v-show="!editMode" disabled style="cursor: context-menu; border-color: white;"/>
                       </d-col>
                       <!-- Last Name -->
@@ -74,7 +75,7 @@
                       <!-- Email -->
                       <d-col md="6" class="form-group">
                         <label for="ketuaLingkungan" style="cursor: context-menu;">Ketua Lingkungan</label>
-                        <d-form-input type="text" id="ketuaLingkungan" v-model="form.ketuaLingkungan" v-show="editMode"/>
+                        <d-form-input type="text" id="ketuaLingkungan" v-model="form.ketuaLingkungan" v-show="editMode" class="hoverable"/>
                         <d-form-input type="text" id="name" :value="dummydata.ketuaLingkungan" v-show="!editMode" disabled style="cursor: context-menu; border-color: white;"/>
                       </d-col>
                       <!-- Password -->
@@ -82,8 +83,8 @@
                         <label for="gender" style="cursor: context-menu;">Gender</label>
                         <fieldset id="gender" class="ml-2" v-show="editMode">
                           <div style="display: flex">
-                          <d-form-radio value=false v-model="form.female" style="font-size: 0.8rem;">Male</d-form-radio>
-                          <d-form-radio value=true v-model="form.female" style="font-size: 0.8rem;" class="ml-4">Female</d-form-radio>
+                          <d-form-radio value=false v-model="form.female" style="font-size: 0.8rem;" class="hoverable">Male</d-form-radio>
+                          <d-form-radio value=true v-model="form.female" style="font-size: 0.8rem;" class="ml-4 hoverable">Female</d-form-radio>
                           </div>
                         </fieldset>
                         <d-form-input type="text" id="gender" :value="dummydata.female ? 'Female' : 'Male'" v-show="!editMode" disabled style="cursor: context-menu; border-color: white;"/>
@@ -92,7 +93,7 @@
                     <!-- Address -->
                     <div class="form-group">
                         <label for="phone" style="cursor: context-menu;">Phone Number</label>
-                        <d-input-group prepend="+62" class="mb-3" id="phone" v-show="editMode">
+                        <d-input-group prepend="+62" class="mb-3 hoverable" id="phone" v-show="editMode">
                           <d-input v-model="form.phone"/>
                         </d-input-group>
                         <d-input-group prepend="+62" class="mb-3" id="phone" v-show="!editMode" disabled style="cursor: context-menu; border-color: white">
@@ -160,7 +161,21 @@ export default {
       this.form.female = this.dummydata.female;
       this.form.phone = this.dummydata.phone;
     },
+    getImage(gender) {
+      if (gender) {
+        return '@/assets/images/avatars/0.jpg';
+      }
+      return '@/assets/images/avatars/1.jpg';
+    },
   },
 };
 </script>
 
+<style>
+.hoverable {
+  transition: 0.5s ease;
+}
+.hoverable:hover {
+  filter: brightness(0.9)
+}
+</style>

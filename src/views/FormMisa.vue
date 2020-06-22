@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    
+
     <d-container fluid class="main-content-container px-4">
 
       <!-- Page Header -->
@@ -12,7 +12,6 @@
         </d-col>
       </d-row>
 
-     
 
               </d-list-group-item>
 
@@ -21,14 +20,14 @@
 
                   <!-- Forms -->
                   <d-col sm="12" md="6">
-                    
-                    
+
+
                       <div class="form-group">
                         <d-form validated>
                           <strong class="text-muted d-block mb-2">Hari</strong>
-                          
+
                           <d-select required>
-                            
+
                             <option>Senin</option>
                             <option>Selasa</option>
                             <option>Rabu</option>
@@ -36,11 +35,11 @@
                             <option>Jumat</option>
                             <option>Sabtu</option>
                             <option>Minggu</option>
-                            
+
 
                           </d-select>
                           </d-form>
-                        
+
                       </div>
                       <div class="form-group">
                         <d-form validated>
@@ -53,36 +52,36 @@
                         <strong class="text-muted d-block mb-2">Waktu Mulai</strong>
                         <d-input placeholder="17.00" required/>
                         </d-form>
-                        </div>  
+                        </div>
 
-                      
+
                       <div class="form-group">
                         <strong class="text-muted d-block mb-2">Waktu Selesai</strong>
                         <d-form validated>
-                          
+
                         <d-input placeholder="19.00" required />
                         </d-input-group>
                         </d-form>
-              
+
                       </div>
                       <div class="form-group">
                         <d-form validated>
                           <strong class="text-muted d-block mb-2">Romo</strong>
                           <d-input placeholder="Mgr. Ignatius Suharyo" required/>
-                          
+
                           </d-form>
-                        
+
                       </div>
-                      
+
                       <label validated for="feDescription">Description</label>
                         <d-textarea name="feDescription" rows="5" required></d-textarea>
-                      
+
                         </d-col>
                       </d-form-row>
                     </d-form>
                   </d-col>
 
-                  
+
                         <d-col md="12" class="form-group">
                           <!-- <d-checkbox>I agree with your <a href="#">Privacy Policy</a>.</d-checkbox> -->
                         </d-col>
@@ -99,7 +98,6 @@
 
         <d-col lg="4" class="mb-4">
 
-          
 
                 </d-form>
               </d-list-group-item>
@@ -118,15 +116,15 @@ export default {
   data() {
     return {
       dummydata: {
-        name: "",
+        name: '',
         female: null,
-        ketuaLingkungan: "",
-        phone: "",
+        ketuaLingkungan: '',
+        phone: '',
 
 
       },
-      date: new Date()
+      date: new Date(),
     };
   },
-}
+};
 </script>

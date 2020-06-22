@@ -103,7 +103,7 @@ const datas = [
     sjam: '18.30',
     romo: 'Wahyu',
   },
-]
+];
 
 export default {
   name: 'DaftarMisa',
@@ -113,5 +113,5 @@ export default {
       datas,
     };
   },
-}
+};
 </script>

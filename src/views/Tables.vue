@@ -113,7 +113,7 @@ const dummydata = [
     lname: 'Einhard',
     female: true,
   },
-]
+];
 
 export default {
   name: 'Tables',
@@ -123,5 +123,5 @@ export default {
       dummydata,
     };
   },
-}
+};
 </script>

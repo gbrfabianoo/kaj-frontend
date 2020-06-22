@@ -7,7 +7,7 @@
         <h3 class="page-title">{{tulisan}}</h3>
       </div>
     </div>
-  
+
     <!-- Default Light Table -->
     <!-- <div class="row">
       <div class="col">
@@ -93,5 +93,5 @@ export default {
       datas,
     };
   },
-}
+};
 </script>
