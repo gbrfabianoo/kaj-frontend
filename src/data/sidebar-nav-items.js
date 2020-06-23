@@ -6,19 +6,19 @@ export default function () {
     },
     htmlBefore: '<i class="material-icons">edit</i>',
     htmlAfter: '',
-  }, {
-    title: 'Forms & Components',
-    htmlBefore: '<i class="material-icons">view_module</i>',
-    to: {
-      name: 'components-overview',
-    },
-  }, {
-    title: 'Tables',
-    htmlBefore: '<i class="material-icons">table_chart</i>',
-    to: {
-      name: 'tables',
-    },
-  }, {
+  }, //{
+  //   title: 'Forms & Components',
+  //   htmlBefore: '<i class="material-icons">view_module</i>',
+  //   to: {
+  //     name: 'components-overview',
+  //   },
+  // }, {
+  //   title: 'Tables',
+  //   htmlBefore: '<i class="material-icons">table_chart</i>',
+  //   to: {
+  //     name: 'tables',
+  //   },
+  {
     title: 'Detail Lingkungan',
     htmlBefore: '<i class="material-icons">person</i>',
     to: {

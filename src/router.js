@@ -3,8 +3,8 @@ import Router from 'vue-router';
 
 import PersonalBlog from './views/PersonalBlog.vue';
 import Errors from './views/Errors.vue';
-import ComponentsOverview from './views/ComponentsOverview.vue';
-import Tables from './views/Tables.vue';
+// import ComponentsOverview from './views/ComponentsOverview.vue';
+// import Tables from './views/Tables.vue';
 import DetailLingkungan from './views/DetailLingkungan.vue';
 import DaftarLingkungan from './views/DaftarLingkungan.vue';
 import DaftarMisa from './views/DaftarMisa.vue';
@@ -67,16 +67,16 @@ export default new Router({
       name: 'errors',
       component: Errors,
     },
-    {
-      path: '/components-overview',
-      name: 'components-overview',
-      component: ComponentsOverview,
-    },
-    {
-      path: '/tables',
-      name: 'tables',
-      component: Tables,
-    },
+    // {
+    //   path: '/components-overview',
+    //   name: 'components-overview',
+    //   component: ComponentsOverview,
+    // },
+    // {
+    //   path: '/tables',
+    //   name: 'tables',
+    //   component: Tables,
+    // },
     {
       path: '*',
       redirect: '/errors',
