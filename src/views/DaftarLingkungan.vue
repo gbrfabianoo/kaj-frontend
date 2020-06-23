@@ -95,12 +95,20 @@ const datas = [
 
 export default {
   name: 'DaftarLingkungan',
+  // created() {
+  //   this.refreshPage()
+  // },
   data() {
     return {
       tulisan: 'Lingkungan',
       datas,
     };
   },
+  // async refreshPage () {
+      
+  //   await api.listMahasiswa().then((res) => {
+  //   console.log(res.data.mahasiswas)
+  //   this.items = res.data.mahasiswas.map((item, id) => { return {...item, id}})
 };
 
 </script>
